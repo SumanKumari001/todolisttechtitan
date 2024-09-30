@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List with Performance Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>To-Do List</h1>
+    
+    <!-- Task Input Form -->
+    <form id="task-form">
+      <input type="text" id="task-name" placeholder="Add new task..." required>
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <input type="date" id="deadline">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Task Filters -->
+    <div class="filter-container">
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+
+      <label for="filter-priority">Filter by Priority:</label>
+      <select id="filter-priority">
+        <option value="All">All</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      <label for="filter-completion">Filter by Status:</label>
+      <select id="filter-completion">
+        <option value="All">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+      </select>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+
+    <!-- Performance Analysis (Bar Graph) -->
+    <h2>Performance Analysis</h2>
+    <canvas id="performanceChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
